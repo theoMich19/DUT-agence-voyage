@@ -1,0 +1,135 @@
+/*
+ * Gère les styles de toutes les interfaces
+ * On met la propriété -fx suivie de la "classique" lorsqu'elle existe
+ * pour un meilleur support
+ */
+
+/* Toolbar */
+.toolbar {
+	-fx-background-color:  #3F2B63;
+	background-color:  #3F2B63;
+}
+.btn-toolbar {
+	-fx-background-insets: 0;
+	-fx-background-color: transparent;
+	background-color: transparent;
+	-fx-text-fill: #fff;
+	-fx-font-size: 12px;
+}
+.btn-toolbar:hover {
+	-fx-background-color:  #2A1C42;
+	background-color:  #2A1C42;
+	-fx-cursor: hand;
+	cursor: pointer;
+}
+
+/* Pages */
+.background {
+	-fx-background-color: #ecf0f5;
+	background-color: #ecf0f5;
+}
+.title {
+	-fx-font-size: 14px;
+	font-size: 14px;
+	-fx-background-color: #fff;
+	background-color: #fff;
+	-fx-border-style: solid none none none;
+    -fx-border-width: 2;
+    -fx-border-color:#3F2B63;
+	-fx-padding: 8 15;
+	padding: 8 15;
+	-fx-background-radius: 6;
+}
+.pane {
+	-fx-background-color: #fff;
+	background-color: #fff;
+	-fx-background-radius: 6;
+}
+.pane-title {
+	-fx-font-size: 18px;
+	font-size: 18px;
+	-fx-padding: 8 15;
+	padding: 8 15;
+	-fx-text-fill: rgb(15, 15, 15);
+	-fx-border-style: solid none none none;
+    -fx-border-width: 2;
+    -fx-border-color:  #3F2B63;
+	-fx-min-width: 100px;
+}
+.submit-btn {
+	-fx-background-color: #1d69b6;
+	background-color: #1d69b6;
+	-fx-text-fill: #fff;
+	-fx-pref-width: 80;
+}
+.submit-btn:hover {
+	-fx-background-color: #195b9e;
+	background-color: #195b9e;
+	-fx-cursor: hand;
+	cursor: pointer;
+}
+.delete-btn {
+	-fx-background-color: #C0392B;
+	background-color: #C0392B;
+	-fx-text-fill: #fff;
+	-fx-pref-width: 80;
+}
+.delete-btn:hover {
+	-fx-background-color: #A93226;
+	background-color: #A93226;
+	-fx-cursor: hand;
+	cursor: pointer;
+}
+.combo-box:hover, .combo-box .list-cell:hover {
+	-fx-cursor: hand;
+	cursor: pointer;
+}
+
+/* Interface Edition */
+.btn-editMenu {
+	-fx-max-width: 340;
+	max-width: 340;
+	-fx-max-height: 100;
+	max-height: 100;
+	-fx-font-weight: 700;
+	font-weight: 700;
+	-fx-font-size: 20px;
+	font-size: 20px;
+	-fx-text-fill: #fff;
+	-fx-background-color: #34495E;
+	background-color: #34495E;
+}
+.btn-editMenu:hover {
+	-fx-cursor: hand;
+	cursor: pointer;
+	-fx-background-color: #253749;
+	background-color: #253749;
+}
+/* Table view */
+.table-view {
+    -fx-background-color: transparent;
+}
+.table-view .column-header-background .filler {
+    -fx-background-color: transparent;
+}
+.table-view .corner {
+    -fx-background-color: transparent;
+}
+.table-view .column-header-background{
+    -fx-background-color: #34495E;
+	background-color: #34495E;
+    -fx-background-radius: 7px 7px 0 0;
+    -fx-background-insets: 0 11px 0 0;
+    -fx-padding: 5px;
+	padding: 5px;
+}
+.table-view .column-header {
+    -fx-background-color: transparent;
+}
+.table-view .column-header .label {
+    -fx-text-fill: #fff;
+    -fx-font-weight: bold;
+	font-weight: bold;
+	-fx-font-size: 13px;
+	font-size: 13px;
+}

@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="978.0" styleClass="background" stylesheets="@interface.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Agence.MainSceneController">
+   <children>
+      <VBox prefHeight="507.0" prefWidth="256.0" styleClass="toolbar" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane prefHeight="106.0" prefWidth="256.0">
+               <children>
+                  <ImageView fitHeight="54.0" fitWidth="54.0" layoutX="31.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@logo.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="98.0" layoutY="26.0" prefHeight="24.0" prefWidth="70.0" text="Agence" textFill="WHITE">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="98.0" layoutY="48.0" prefHeight="32.0" prefWidth="103.0" text="Évasion" textFill="WHITE">
+                     <font>
+                        <Font name="Arial" size="25.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Button accessibleRole="PARENT" alignment="BASELINE_LEFT" graphicTextGap="15.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="256.0" styleClass="btn-toolbar" text="Édition">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="EDIT" size="15.0" text="" />
+               </graphic>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
+            <Button accessibleRole="PARENT" alignment="BASELINE_LEFT" graphicTextGap="15.0" mnemonicParsing="false" onAction="#btnVoyagesClicked" prefHeight="52.0" prefWidth="256.0" styleClass="btn-toolbar" text="Voyages">
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="PLANE" size="15.0" />
+               </graphic>
+            </Button>
+            <Button accessibleRole="PARENT" alignment="BASELINE_LEFT" graphicTextGap="15.0" mnemonicParsing="false" onAction="#btnExporterClicked" prefHeight="52.0" prefWidth="256.0" styleClass="btn-toolbar" text="Exporter">
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="SAVE" size="15.0" />
+               </graphic>
+            </Button>
+            <Button accessibleRole="PARENT" alignment="BASELINE_LEFT" graphicTextGap="15.0" mnemonicParsing="false" onAction="#btnRechercheClicked" prefHeight="52.0" prefWidth="256.0" styleClass="btn-toolbar" text="Recherche">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="SEARCH" size="15.0" />
+               </graphic>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
+            <Button accessibleRole="PARENT" alignment="BASELINE_LEFT" graphicTextGap="15.0" mnemonicParsing="false" onAction="#btnAideClicked" prefHeight="52.0" prefWidth="256.0" styleClass="btn-toolbar" text="Aide">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="INFO" size="15.0" />
+               </graphic>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
+            <Button accessibleRole="PARENT" alignment="BASELINE_LEFT" graphicTextGap="15.0" mnemonicParsing="false" onAction="#btnQuitterClicked" prefHeight="52.0" prefWidth="256.0" styleClass="btn-toolbar" text="Quitter">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="CLOSE" size="15.0" />
+               </graphic>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
+         </children>
+      </VBox>
+      <GridPane layoutX="256.0" layoutY="2.0" prefHeight="500.0" prefWidth="722.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="256.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columnConstraints>
+          <ColumnConstraints halignment="LEFT" hgrow="ALWAYS" minWidth="10.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints fillHeight="false" maxHeight="54.0" minHeight="46.0" prefHeight="46.0" valignment="TOP" vgrow="SOMETIMES" />
+          <RowConstraints fillHeight="false" maxHeight="454.4000076293945" minHeight="10.0" prefHeight="450.20000610351565" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label maxWidth="1.7976931348623157E308" prefHeight="41.0" prefWidth="708.0" styleClass="title" text="ÉDITION" textAlignment="CENTER" GridPane.halignment="LEFT" GridPane.hgrow="ALWAYS" GridPane.valignment="TOP" GridPane.vgrow="NEVER">
+               <font>
+                  <Font size="21.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="12.0" right="20.0" top="4.0" />
+               </GridPane.margin>
+            </Label>
+            <GridPane hgap="4.0" prefHeight="327.0" prefWidth="690.0" vgap="2.0" GridPane.rowIndex="1" GridPane.valignment="TOP">
+              <columnConstraints>
+                <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button fx:id="btnVilles" mnemonicParsing="false" onAction="#btnVillesClicked" prefHeight="31.0" prefWidth="144.0" text="Villes" GridPane.halignment="CENTER">
+                     <styleClass>
+                        <String fx:value="btn-editMenu" />
+                        <String fx:value="btn-editMenu-ville" />
+                     </styleClass>
+                  </Button>
+                  <Button fx:id="btnVoyages" mnemonicParsing="false" onAction="#btnVoyagesClicked" prefHeight="31.0" prefWidth="84.0" text="Voyages" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                     <styleClass>
+                        <String fx:value="btn-editMenu" />
+                        <String fx:value="btn-editMenu-voyage" />
+                     </styleClass>
+                  </Button>
+                  <Button fx:id="btnHotels" mnemonicParsing="false" onAction="#btnHotelsClicked" prefHeight="31.0" prefWidth="77.0" text="Hôtels" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+                     <styleClass>
+                        <String fx:value="btn-editMenu" />
+                        <String fx:value="btn-editMenu-hotel" />
+                     </styleClass>
+                  </Button>
+                  <Button fx:id="btnPays" mnemonicParsing="false" onAction="#btnPaysClicked" prefHeight="31.0" prefWidth="77.0" text="Pays" GridPane.columnIndex="1" GridPane.halignment="CENTER">
+                     <styleClass>
+                        <String fx:value="btn-editMenu" />
+                        <String fx:value="btn-editMenu-pays" />
+                     </styleClass>
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </Button>
+                  <Button fx:id="btnTarifs" mnemonicParsing="false" onAction="#btnTarifsClicked" prefHeight="31.0" prefWidth="84.0" text="Tarifs" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                     <styleClass>
+                        <String fx:value="btn-editMenu" />
+                        <String fx:value="btn-editMenu-tarifs" />
+                     </styleClass>
+                  </Button>
+                  <Button fx:id="btnVisites" mnemonicParsing="false" onAction="#btnVisitesClicked" prefHeight="31.0" prefWidth="84.0" text="Visites" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+                     <styleClass>
+                        <String fx:value="btn-editMenu" />
+                        <String fx:value="btn-editMenu-tarifs" />
+                     </styleClass>
+                  </Button>
+                  <Button fx:id="btnModifier" mnemonicParsing="false" onAction="#btnModifierClicked" prefHeight="31.0" prefWidth="77.0" text="Voyages organisés" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+                     <styleClass>
+                        <String fx:value="btn-editMenu" />
+                        <String fx:value="btn-editMenu-hotel" />
+                     </styleClass>
+                  </Button>
+               </children>
+               <GridPane.margin>
+                  <Insets left="12.0" right="20.0" top="20.0" />
+               </GridPane.margin>
+            </GridPane>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

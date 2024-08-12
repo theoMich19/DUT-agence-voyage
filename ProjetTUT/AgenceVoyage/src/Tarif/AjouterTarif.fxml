@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="978.0" styleClass="background" stylesheets="@../Agence/interface.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Tarif.AjouterTarifController">
+         <children>
+      <VBox prefHeight="507.0" prefWidth="256.0" styleClass="toolbar" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane prefHeight="106.0" prefWidth="256.0">
+               <children>
+                  <ImageView fitHeight="54.0" fitWidth="54.0" layoutX="31.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Agence/logo.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="98.0" layoutY="26.0" prefHeight="24.0" prefWidth="70.0" text="Agence" textFill="WHITE">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="98.0" layoutY="48.0" prefHeight="32.0" prefWidth="103.0" text="Évasion" textFill="WHITE">
+                     <font>
+                        <Font name="Arial" size="25.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Button fx:id="btnEditer1" accessibleRole="PARENT" alignment="BASELINE_LEFT" graphicTextGap="15.0" mnemonicParsing="false" onAction="#btnEditerClicked" prefHeight="52.0" prefWidth="256.0" styleClass="btn-toolbar" text="Édition">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="EDIT" size="15.0" text="" />
+               </graphic>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
+            <Button fx:id="btnVoyages1" accessibleRole="PARENT" alignment="BASELINE_LEFT" graphicTextGap="15.0" mnemonicParsing="false" onAction="#btnVoyagesClicked" prefHeight="52.0" prefWidth="256.0" styleClass="btn-toolbar" text="Voyages">
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="PLANE" size="15.0" />
+               </graphic>
+            </Button>
+            <Button accessibleRole="PARENT" alignment="BASELINE_LEFT" graphicTextGap="15.0" mnemonicParsing="false" onAction="#btnExporterClicked" prefHeight="52.0" prefWidth="256.0" styleClass="btn-toolbar" text="Exporter">
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="SAVE" size="15.0" />
+               </graphic>
+            </Button>
+            <Button fx:id="btnRecherche1" accessibleRole="PARENT" alignment="BASELINE_LEFT" graphicTextGap="15.0" mnemonicParsing="false" onAction="#btnRechercheClicked" prefHeight="52.0" prefWidth="256.0" styleClass="btn-toolbar" text="Recherche">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="SEARCH" size="15.0" />
+               </graphic>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
+            <Button fx:id="btnAide" accessibleRole="PARENT" alignment="BASELINE_LEFT" graphicTextGap="15.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="256.0" styleClass="btn-toolbar" text="Aide">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="INFO" size="15.0" />
+               </graphic>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
+            <Button fx:id="btnQuitter" accessibleRole="PARENT" alignment="BASELINE_LEFT" graphicTextGap="15.0" mnemonicParsing="false" onAction="#btnQuitterClicked" prefHeight="52.0" prefWidth="256.0" styleClass="btn-toolbar" text="Quitter">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="CLOSE" size="15.0" />
+               </graphic>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
+         </children>
+      </VBox>
+      <ScrollPane cacheShape="false" centerShape="false" fitToWidth="true" focusTraversable="false" hbarPolicy="NEVER" prefHeight="500.0" prefWidth="722.0" scaleShape="false" styleClass="background" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="256.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefWidth="716.0" styleClass="background">
+               <children>
+                  <GridPane prefHeight="574.0" prefWidth="698.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <columnConstraints>
+                        <ColumnConstraints halignment="LEFT" hgrow="ALWAYS" minWidth="10.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints fillHeight="false" maxHeight="54.0" minHeight="46.0" prefHeight="46.0" valignment="TOP" vgrow="SOMETIMES" />
+                        <RowConstraints fillHeight="false" maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="450.20000610351565" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label maxWidth="1.7976931348623157E308" prefHeight="41.0" prefWidth="708.0" styleClass="title" text="ÉDITION &gt; TARIFS" textAlignment="CENTER" GridPane.halignment="LEFT" GridPane.hgrow="ALWAYS" GridPane.valignment="TOP" GridPane.vgrow="NEVER">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets left="12.0" top="4.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <GridPane hgap="6.0" prefHeight="522.0" prefWidth="687.0" vgap="6.0" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints maxHeight="328.8000152587891" minHeight="10.0" prefHeight="215.2" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="285.6" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <GridPane.margin>
+                              <Insets left="12.0" top="20.0" />
+                           </GridPane.margin>
+                           <children>
+                              <Pane prefHeight="230.0" prefWidth="687.0" styleClass="pane">
+                                 <children>
+                                    <Label fx:id="LabelAjouter" styleClass="pane-title" text="Ajouter" />
+                                          <Label layoutX="23.0" layoutY="48.0" prefHeight="35.0" prefWidth="30.0" text="Du">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                    </Label>
+                                          <Label alignment="CENTER" contentDisplay="CENTER" layoutX="181.0" layoutY="48.0" prefHeight="35.0" prefWidth="30.0" text="au">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                    </Label>
+                                          <Label layoutX="23.0" layoutY="86.0" prefHeight="25.0" prefWidth="55.0" text="Tarifs">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                    </Label>
+                                          <ScrollPane layoutX="23.0" layoutY="112.0" prefHeight="54.0" prefWidth="649.0" vbarPolicy="NEVER">
+                                             <content>
+                                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="39.0" prefWidth="702.0">
+                                                   <children>
+                                                      <TextField fx:id="tfTarifGrp1" alignment="CENTER" layoutX="2.0" layoutY="2.0" prefHeight="36.0" prefWidth="60.0" promptText="Tarif 1" />
+                                                      <TextField fx:id="tfTarifGrp2" alignment="CENTER" layoutX="72.0" layoutY="2.0" prefHeight="36.0" prefWidth="60.0" promptText="Tarif 2" />
+                                                      <TextField fx:id="tfTarifGrp3" alignment="CENTER" layoutX="142.0" layoutY="2.0" prefHeight="36.0" prefWidth="60.0" promptText="Tarif 3" />
+                                                      <TextField fx:id="tfTarifGrp4" alignment="CENTER" layoutX="212.0" layoutY="2.0" prefHeight="36.0" prefWidth="60.0" promptText="Tarif 4" />
+                                                      <TextField fx:id="tfTarifGrp5" alignment="CENTER" layoutX="282.0" layoutY="2.0" prefHeight="36.0" prefWidth="60.0" promptText="Tarif 5" />
+                                                      <TextField fx:id="tfTarifGrp6" alignment="CENTER" layoutX="352.0" layoutY="2.0" prefHeight="36.0" prefWidth="60.0" promptText="Tarif 6" />
+                                                      <TextField fx:id="tfTarifGrp7" alignment="CENTER" layoutX="422.0" layoutY="2.0" prefHeight="36.0" prefWidth="60.0" promptText="Tarif 7" />
+                                                      <TextField fx:id="tfTarifGrp8" alignment="CENTER" layoutX="492.0" layoutY="1.0" prefHeight="36.0" prefWidth="60.0" promptText="Tarif 8" />
+                                                      <TextField fx:id="tfTarifGrp9" alignment="CENTER" layoutX="562.0" layoutY="2.0" prefHeight="36.0" prefWidth="60.0" promptText="Tarif 9" />
+                                                      <TextField fx:id="tfTarifGrp10" alignment="CENTER" layoutX="632.0" layoutY="2.0" prefHeight="36.0" prefWidth="60.0" promptText="Tarif 10" />
+                                                   </children>
+                                                </AnchorPane>
+                                             </content>
+                                          </ScrollPane>
+                                          <Button fx:id="btnOkTarifs" layoutX="593.0" layoutY="177.0" mnemonicParsing="false" onAction="#btnTarifsClicked" styleClass="submit-btn" text="Ajouter" />
+                                    <DatePicker fx:id="tfDateDebut" editable="false" layoutX="53.0" layoutY="53.0" prefWidth="120.0" />
+                                    <DatePicker fx:id="tfDateFin" editable="false" layoutX="224.0" layoutY="53.0" prefWidth="120.0" />
+                                    <Label fx:id="lblNbJour" alignment="TOP_LEFT" layoutX="390.0" layoutY="50.0" wrapText="true" />
+                                 </children>
+                              </Pane>
+                              <Pane prefHeight="278.0" prefWidth="687.0" styleClass="pane" GridPane.rowIndex="1">
+                                 <children>
+                                    <Label styleClass="pane-title" text="Éditer" />
+                                    <TableView fx:id="tbvTarif" editable="true" layoutX="9.0" layoutY="48.0" prefHeight="164.0" prefWidth="670.0">
+                                       <columns>
+                                          <TableColumn fx:id="dateDep" maxWidth="100.0" minWidth="80.0" prefWidth="100.0" resizable="false" text="Date départ" />
+                                          <TableColumn fx:id="dateFin" maxWidth="100.0" minWidth="80.0" prefWidth="100.0" resizable="false" text="Date retour" />
+                                          <TableColumn fx:id="tGroupe1" maxWidth="60.0" minWidth="74.0" prefWidth="120.0" text="Groupe 1" />
+                                          <TableColumn fx:id="tGroupe2" maxWidth="60.0" minWidth="74.0" prefWidth="120.0" text="Groupe 2" />
+                                          <TableColumn fx:id="tGroupe3" maxWidth="60.0" minWidth="74.0" prefWidth="120.0" text="Groupe 3" />
+                                          <TableColumn fx:id="tGroupe4" maxWidth="60.0" minWidth="74.0" prefWidth="120.0" text="Groupe 4" />
+                                          <TableColumn fx:id="tGroupe5" maxWidth="60.0" minWidth="74.0" prefWidth="120.0" text="Groupe 5" />
+                                          <TableColumn fx:id="tGroupe6" maxWidth="60.0" minWidth="74.0" prefWidth="120.0" text="Groupe 6" />
+                                          <TableColumn fx:id="tGroupe7" maxWidth="60.0" minWidth="74.0" prefWidth="120.0" text="Groupe 7" />
+                                          <TableColumn fx:id="tGroupe8" maxWidth="60.0" minWidth="74.0" prefWidth="120.0" text="Groupe 8" />
+                                          <TableColumn fx:id="tGroupe9" maxWidth="60.0" minWidth="74.0" prefWidth="120.0" text="Groupe 9" />
+                                          <TableColumn fx:id="tGroupe10" minWidth="74.0" prefWidth="120.0" text="Groupe 10" />
+                                       </columns>
+                                    </TableView>
+                                    <Button fx:id="btnSupprimerVille" layoutX="588.0" layoutY="234.0" mnemonicParsing="false" onAction="#btnSupprimerVilleClicked" styleClass="delete-btn" text="Supprimer" />
+                                 </children>
+                              </Pane>
+                           </children>
+                        </GridPane>
+                     </children>
+                  </GridPane>
+               </children>
+               <padding>
+                  <Insets bottom="4.0" />
+               </padding>
+            </AnchorPane>
+         </content>
+         <padding>
+            <Insets right="10.0" />
+         </padding>
+      </ScrollPane>
+         </children>
+      </AnchorPane>

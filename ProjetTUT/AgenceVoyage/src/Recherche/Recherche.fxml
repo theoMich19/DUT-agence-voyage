@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="978.0" stylesheets="@../Agence/interface.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Recherche.RechercheController">
+   <children>
+      <VBox prefHeight="507.0" prefWidth="256.0" styleClass="toolbar" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane prefHeight="106.0" prefWidth="256.0">
+               <children>
+                  <ImageView fitHeight="54.0" fitWidth="54.0" layoutX="31.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Agence/logo.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="98.0" layoutY="26.0" prefHeight="24.0" prefWidth="70.0" text="Agence" textFill="WHITE">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="98.0" layoutY="48.0" prefHeight="32.0" prefWidth="103.0" text="Évasion" textFill="WHITE">
+                     <font>
+                        <Font name="Arial" size="25.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Button fx:id="btnEditer1" accessibleRole="PARENT" alignment="BASELINE_LEFT" graphicTextGap="15.0" mnemonicParsing="false" onAction="#btnEditerClicked" prefHeight="52.0" prefWidth="256.0" styleClass="btn-toolbar" text="Édition">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="EDIT" size="15.0" text="" />
+               </graphic>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
+            <Button fx:id="btnVoyages1" accessibleRole="PARENT" alignment="BASELINE_LEFT" graphicTextGap="15.0" mnemonicParsing="false" onAction="#btnVoyagesClicked" prefHeight="52.0" prefWidth="256.0" styleClass="btn-toolbar" text="Voyages">
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="PLANE" size="15.0" />
+               </graphic>
+            </Button>
+            <Button accessibleRole="PARENT" alignment="BASELINE_LEFT" graphicTextGap="15.0" mnemonicParsing="false" onAction="#btnExporterClicked" prefHeight="52.0" prefWidth="256.0" styleClass="btn-toolbar" text="Exporter">
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="SAVE" size="15.0" />
+               </graphic>
+            </Button>
+            <Button accessibleRole="PARENT" alignment="BASELINE_LEFT" graphicTextGap="15.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="256.0" styleClass="btn-toolbar" text="Recherche">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="SEARCH" size="15.0" />
+               </graphic>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
+            <Button fx:id="btnAide" accessibleRole="PARENT" alignment="BASELINE_LEFT" graphicTextGap="15.0" mnemonicParsing="false" onAction="#btnAideClicked" prefHeight="52.0" prefWidth="256.0" styleClass="btn-toolbar" text="Aide">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="INFO" size="15.0" />
+               </graphic>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
+            <Button fx:id="btnQuitter" accessibleRole="PARENT" alignment="BASELINE_LEFT" graphicTextGap="15.0" mnemonicParsing="false" onAction="#btnQuitterClicked" prefHeight="52.0" prefWidth="256.0" styleClass="btn-toolbar" text="Quitter">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="CLOSE" size="15.0" />
+               </graphic>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
+         </children>
+      </VBox>
+      <ScrollPane cacheShape="false" centerShape="false" fitToWidth="true" focusTraversable="false" hbarPolicy="NEVER" prefHeight="500.0" prefWidth="722.0" scaleShape="false" styleClass="background" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="256.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefWidth="716.0" styleClass="background">
+               <children>
+                  <GridPane prefHeight="1250.0" prefWidth="730.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <columnConstraints>
+                        <ColumnConstraints halignment="LEFT" hgrow="ALWAYS" minWidth="10.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints fillHeight="false" maxHeight="54.0" minHeight="46.0" prefHeight="46.0" valignment="TOP" vgrow="SOMETIMES" />
+                        <RowConstraints fillHeight="false" maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="2050.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label maxWidth="1.7976931348623157E308" prefHeight="41.0" prefWidth="708.0" styleClass="title" text="RECHERCHE" textAlignment="CENTER" GridPane.halignment="LEFT" GridPane.hgrow="ALWAYS" GridPane.valignment="TOP" GridPane.vgrow="NEVER">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets left="12.0" top="4.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <GridPane hgap="6.0" prefHeight="2000.0" prefWidth="695.0" vgap="6.0" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints maxHeight="500.0" minHeight="10.0" prefHeight="430.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="500.0" minHeight="10.0" prefHeight="450.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="1050.0" minHeight="10.0" prefHeight="725.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <GridPane.margin>
+                              <Insets left="12.0" top="20.0" />
+                           </GridPane.margin>
+                           <children>
+                              <Pane prefHeight="329.0" prefWidth="688.0" styleClass="pane">
+                                 <children>
+                                    <Label styleClass="pane-title" text="Filtres" />
+                                    <Label layoutX="82.0" layoutY="48.0" prefHeight="25.0" prefWidth="50.0" text="Pays">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="tfPaysCherche" layoutX="150.0" layoutY="48.0" prefHeight="25.0" />
+                                    <Label layoutX="82.0" layoutY="82.0" prefHeight="35.0" prefWidth="30.0" text="Du">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label alignment="CENTER" contentDisplay="CENTER" layoutX="271.0" layoutY="82.0" prefHeight="35.0" prefWidth="30.0" text="au">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <DatePicker fx:id="tfDateDebut" editable="false" layoutX="150.0" layoutY="88.0" prefHeight="25.0" prefWidth="120.0" />
+                                    <DatePicker fx:id="tfDateFin" editable="false" layoutX="301.0" layoutY="87.0" prefWidth="120.0" />
+                                    <Label layoutX="82.0" layoutY="125.0" prefHeight="25.0" prefWidth="103.0" text="Tarif max.">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="tfTarifMaxCherche" layoutX="150.0" layoutY="125.0" prefHeight="25.0" prefWidth="91.0" />
+                                    <Label layoutX="245.0" layoutY="125.0" prefHeight="25.0" prefWidth="16.0" text="€">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                 
+                                    <Label layoutX="83.0" layoutY="161.0" prefHeight="25.0" prefWidth="125.0" text="Type de voyage">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <CheckBox fx:id="cbxSansHebergement" layoutX="196.0" layoutY="165.0" mnemonicParsing="false" onAction="#cbxSansHebergementClicked" text="Sans hébergement" />
+                                    <CheckBox fx:id="cbxAvecHebergement" layoutX="196.0" layoutY="195.0" mnemonicParsing="false" onAction="#cbxAvecHebergementClicked" text="Avec hébergement" />
+                                    <CheckBox fx:id="cbxOrganise" layoutX="196.0" layoutY="225.0" mnemonicParsing="false" onAction="#cbxOrganiseClicked" text="Organisé" />
+                                    <Button fx:id="btnOkRecherche" layoutX="465.0" layoutY="240.0" mnemonicParsing="false" onAction="#btnOKRechercheClicked" styleClass="submit-btn" text="Rechercher" />
+                                    <Button fx:id="btnFiltre" layoutX="550.0" layoutY="240.0" mnemonicParsing="false" onAction="#btnFiltreClicked" prefHeight="25.0" prefWidth="124.0" style="-fx-min-width: 124;" styleClass="delete-btn" text="Supprimer les filtres" />
+                                 </children>
+                              </Pane>
+                              <Pane prefHeight="800.0" prefWidth="688.0" styleClass="pane" GridPane.rowIndex="1">
+                                 <children>
+                                    <Label styleClass="pane-title" text="Résultats" />
+                                    <ListView fx:id="viewVoyage" layoutX="100.0" layoutY="45.0" prefHeight="200.0" prefWidth="500.0" />
+                                    <Button fx:id="btnAfficherDetails" layoutX="578.0" layoutY="260.0" mnemonicParsing="false" onAction="#btnAfficherDetailsClicked" styleClass="submit-btn" text="Rechercher" />
+                                 </children>
+                              </Pane>
+                              <Pane prefHeight="800.0" prefWidth="688.0" styleClass="pane" GridPane.rowIndex="2">
+                                 <children>
+                                    <Label styleClass="pane-title" text="Détails" />
+                                    <Label fx:id="labelDureeVoyage" layoutX="82.0" layoutY="60.0" prefHeight="25.0" prefWidth="550.0" text="La durée du séjour ne peut pas être affiché, car vous n'avez pas sélectionné de voyage">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="labelTransport" layoutX="82.0" layoutY="110.0" prefHeight="25.0" prefWidth="550.0" text="Le transport ne peut pas être affiché, car vous n'avez pas sélectionné de voyage">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TableView fx:id="tbvTarif" editable="true" layoutX="15.0" layoutY="190.0" prefHeight="164.0" prefWidth="670.0">
+                                       <columns>
+                                          <TableColumn fx:id="dateDep" maxWidth="100.0" minWidth="80.0" prefWidth="100.0" resizable="false" text="Date départ" />
+                                          <TableColumn fx:id="dateFin" maxWidth="100.0" minWidth="80.0" prefWidth="100.0" resizable="false" text="Date retour" />
+                                          <TableColumn fx:id="tGroupe1" maxWidth="60.0" minWidth="74.0" prefWidth="120.0" text="Groupe 1" />
+                                          <TableColumn fx:id="tGroupe2" maxWidth="60.0" minWidth="74.0" prefWidth="120.0" text="Groupe 2" />
+                                          <TableColumn fx:id="tGroupe3" maxWidth="60.0" minWidth="74.0" prefWidth="120.0" text="Groupe 3" />
+                                          <TableColumn fx:id="tGroupe4" maxWidth="60.0" minWidth="74.0" prefWidth="120.0" text="Groupe 4" />
+                                          <TableColumn fx:id="tGroupe5" maxWidth="60.0" minWidth="74.0" prefWidth="120.0" text="Groupe 5" />
+                                          <TableColumn fx:id="tGroupe6" maxWidth="60.0" minWidth="74.0" prefWidth="120.0" text="Groupe 6" />
+                                          <TableColumn fx:id="tGroupe7" maxWidth="60.0" minWidth="74.0" prefWidth="120.0" text="Groupe 7" />
+                                          <TableColumn fx:id="tGroupe8" maxWidth="60.0" minWidth="74.0" prefWidth="120.0" text="Groupe 8" />
+                                          <TableColumn fx:id="tGroupe9" maxWidth="60.0" minWidth="74.0" prefWidth="120.0" text="Groupe 9" />
+                                          <TableColumn fx:id="tGroupe10" minWidth="74.0" prefWidth="120.0" text="Groupe 10" />
+                                       </columns>
+                                    </TableView>
+                                    <Label layoutX="30.0" layoutY="160.0" prefHeight="25.0" prefWidth="132.0" text="Tarifs par période">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Pane layoutX="15.0" layoutY="375.0" prefHeight="184.0" prefWidth="673.0">
+                                       <children>
+                                          <ListView fx:id="viewPays" layoutX="28.0" layoutY="32.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="140.0" prefWidth="160.0" />
+                                          <Label layoutX="35.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="17.0" prefWidth="92.0" text="Pays" />
+                                          <ListView fx:id="viewHotel" layoutX="221.0" layoutY="32.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="140.0" prefWidth="160.0" />
+                                          <Label layoutX="235.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="17.0" prefWidth="92.0" text="Hôtels" />
+                                          <ListView fx:id="viewVisite" layoutX="420.0" layoutY="32.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="140.0" prefWidth="160.0" />
+                                          <Label layoutX="434.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="17.0" prefWidth="92.0" text="Visites" />
+                                       </children>
+                                    </Pane>
+                                 </children>
+                              </Pane>
+                           </children>
+                        </GridPane>
+                     </children>
+                  </GridPane>
+               </children>
+               <padding>
+                  <Insets bottom="4.0" />
+               </padding>
+            </AnchorPane>
+         </content>
+         <padding>
+            <Insets right="10.0" />
+         </padding>
+      </ScrollPane>
+   </children>
+</AnchorPane>
